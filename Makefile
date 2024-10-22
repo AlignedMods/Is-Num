@@ -23,7 +23,7 @@ all: always $(LIB)
 
 $(LIB): $(OBJECTS)
 ifeq ($(LIBTYPE), STATIC)
-	$(AR) rcs $< $<
+	$(AR) rcs $@ $<
 else
 	$(CC) -shared $^ -o $@
 endif
